@@ -1,0 +1,45 @@
+.circular-gallery {
+  width: 100%;
+  height: 500px;              /* Height default desktop */
+  overflow: hidden;
+  cursor: grab;
+  font-family: "Poppins", sans-serif;
+}
+
+.circular-gallery:active {
+  cursor: grabbing;
+}
+
+/* --- RESPONSIVE --- */
+
+/* Laptop / Tablet Horizontal */
+@media (max-width: 1200px) {
+  .circular-gallery {
+    height: 420px;
+    padding: 0;
+  }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .circular-gallery {
+    height: 360px;
+    padding: 0;
+  }
+}
+
+/* Large Mobile */
+@media (max-width: 600px) {
+  .circular-gallery {
+    height: 300px;
+    padding: 0;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 430px) {
+  .circular-gallery {
+    height: 260px;
+    padding: 0;
+  }
+}
