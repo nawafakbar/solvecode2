@@ -5,6 +5,7 @@ import CircularGallery from '@/component/ui/CircularGallery';
 import LiquidEther from '@/component/ui/LiquidEther';
 import Services from '@/component/layout/Services';
 import Silk from "@/component/ui/Silk";
+import Spline from '@splinetool/react-spline';
 
 export default function Home() {
   return (
@@ -169,7 +170,7 @@ export default function Home() {
                 <div className="h-[500px] w-full relative order-1 lg:order-2">
                     {/* Placeholder Spline Scene - Ganti URL di bawah dengan punya kamu sendiri */}
                     {/* Scene ini menampilkan robot 3D interaktif sebagai contoh */}
-                    <spline-viewer url="https://prod.spline.design/cP7Xf-EyyvxeU6Wz/scene.splinecode"></spline-viewer>
+                    <Spline scene="https://prod.spline.design/cP7Xf-EyyvxeU6Wz/scene.splinecode" />
                     
                     {/* Gradient Overlay biar transisinya halus ke background (Optional) */}
                     <div className="absolute inset-0 pointer-events-none" />
