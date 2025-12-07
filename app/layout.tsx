@@ -1,17 +1,19 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import localFont from 'next/font/local'
 import "./globals.css";
 import Footer from "@/component/layout/Footer";
 import CardNav from '@/component/layout/CardNav'
 import SplashCursor from "@/component/ui/SplashCursor";
 
-const poppins = Poppins({
-  subsets: ["latin"],
-  display: "swap",
-  // Wajib isi weight (ketebalan) yang mau dipakai. 
-  // 400=Biasa, 500=Sedang, 600=Agak Tebal, 700=Bold
-  weight: ["400", "500", "600", "700"], 
-});
+const poppins = localFont({
+  src: [
+    { path: '../public/fonts/Poppins-Regular.ttf', weight: '400' },
+    { path: '../public/fonts/Poppins-Medium.ttf', weight: '500' },
+    { path: '../public/fonts/Poppins-SemiBold.ttf', weight: '600' },
+    { path: '../public/fonts/Poppins-Bold.ttf', weight: '700' },
+  ],
+  variable: '--font-poppins',
+})
 
 const items = [
     {
@@ -56,7 +58,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} bg-black text-white overflow-x-hidden`}>
+      <body className={`${poppins.variable} bg-black text-white overflow-x-hidden`}>
         {/* Cursor Effect ditaruh paling atas */}
         <SplashCursor /> 
         
